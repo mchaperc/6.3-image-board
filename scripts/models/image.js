@@ -1,5 +1,11 @@
 var Image = Backbone.Model.extend({
 
+	validate: function(attrs, options) {
+		if(attrs.image_url.indexOf('http://') === -1 && attrs.image_url.indexOf('https://') === -1) {
+			return "URL is invalid";
+		}
+	},
+
 	idAttribute: '_id',
 
 	defaults: function() {

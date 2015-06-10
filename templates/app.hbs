@@ -6,15 +6,12 @@
 	<input type="text" class="add-image-url" placeholder="Enter an image URL" required autofocus>
 	<input type="text" class="add-image-caption" placeholder="Enter a caption for the image">
 	<div class="buttons"></div>
-		<button class="add-image-clear-form">Cancel</button>
-		<button class="add-image-submit"><i class="fa fa-image"></i> Add Image</button>
+		<button type="reset" class="add-image-clear-form">Cancel</button>
+		<button type="submit" class="add-image-submit"><i class="fa fa-image"></i> Add Image</button>
 	</div>
 </form>
 
 <section class="stored-images">
-
-	{{log this}}
-
 	{{#each this}}
 	<div class="stored-image-container">
 		<img src="{{image_url}}" alt="" class="stored-image-image">

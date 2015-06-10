@@ -8,7 +8,7 @@ export default Backbone.View.extend({
 
 		'click .add-image-clear-form': 'clearForm',
 
-		'click .add-image-submit': 'addImage'
+		'submit .add-image-form': 'addImage'
 
 	},
 
@@ -18,14 +18,15 @@ export default Backbone.View.extend({
 	},
 
 	clearForm: function(e) {
-		e.preventDefault();
-		var urlInput = this.$('.add-image-url');
-		var captionInput = this.$('.add-image-caption');
-		urlInput.val('');
-		captionInput.val('');
+		// e.preventDefault();
+		// var urlInput = this.$('.add-image-url');
+		// var captionInput = this.$('.add-image-caption');
+		// urlInput.val('');
+		// captionInput.val('');
 	},
 
 	addImage: function(e) {
+		console.log('adding');
 		e.preventDefault();
 		var urlInput = this.$('.add-image-url').val();
 		var captionInput = this.$('.add-image-caption').val();
@@ -39,6 +40,9 @@ export default Backbone.View.extend({
 	initialize: function(options) {
 		this.username = options.user ? options.user.get('username') : '';
 		this.render();
+		this.listenTo(this.collection, 'invalid', function() {
+			alert('got problems...');
+		});
 		this.listenTo(this.collection, 'update', this.render);
 	},
 
