@@ -128,3 +128,28 @@ button.add-image-submit {
 .stored-image-username {
 	margin-top: .5em;
 }
+
+@include media(max-width $mobile) {
+	
+	.view-form {
+		height: 350px;
+	}
+
+	button.add-image-clear-form,
+	button.add-image-submit {
+		position: relative;
+		display: block;
+		width: 80%;
+		left: 10%;
+		margin-bottom: 1em;
+	}
+
+	.stored-image-container {
+		width: 80%;
+		margin-bottom: 3em;
+	}
+
+	.stored-image-container img {
+		max-width: 100%;
+	}
+}
