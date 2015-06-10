@@ -1,0 +1,130 @@
+* {
+	outline: none;
+}
+
+
+header {
+	background: linear-gradient(rgb(60, 103, 154), rgb(88, 117, 153));
+	border: 1px solid rgb(60, 103, 153);
+	height: 50px;
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+}
+
+.fa-plus-circle {
+	color: rgb(8, 34, 56);
+	font-size: 2em;
+	line-height: 50px;
+	margin-left: 10%;
+}
+
+.fa:hover {
+	cursor: pointer;
+}
+
+.hide-form {
+	visibility: hidden;
+}
+
+.view-form {
+	background-color: white;
+	height: 300px;
+	padding: 3em;
+	position: fixed;
+	top: 50px;
+	visibility: visible;
+	width: 100%;
+	z-index: 1000;
+}
+
+.add-image-url {
+	display: block;
+	font-size: 1.2em;
+	padding: .7em;
+	width: 80%;
+	margin: 0 auto;
+	margin-bottom: 1em;
+}
+
+.add-image-caption {
+	display: block;
+	font-size: 1.2em;
+	padding: .7em;
+	width: 80%;
+	margin: 0 auto;
+	margin-bottom: 1em;
+}
+
+.view-form button {
+	border-style: none;
+	color: white;
+	height: 60px;
+}
+
+button.add-image-clear-form {
+	background-color: rgb(182, 182, 182);
+	border-radius: 5px;
+	width: 100px;
+	position: absolute;
+	right: 26%;
+}
+
+button.add-image-submit {
+	background-color: rgb(23, 170, 86);
+	border: 1px solid rgb(4, 163, 72);
+	border-radius: 5px;
+	color: white;
+	width: 150px;
+	position: absolute;
+	right: 13%;
+}
+
+.stored-images {
+	@include outer-container(600px);
+	background-color: rgb(224, 225, 226);
+	border: 1px solid rgb(201, 202, 203);
+	position: relative;
+	top: 100px;
+}
+
+.stored-image-container {
+	box-shadow: 0 0 3px gray;
+	margin: 0 auto;
+	margin-bottom: 5%;
+	width: 450px;
+}
+
+.stored-image-container img {
+	display: block;
+	width: 100%;
+	max-height: 100%;
+	margin: 0 auto;
+	margin-top: 5%;
+	margin-bottom: 0;
+}
+
+.stored-image-caption-container {
+	background-color: rgb(250, 250, 250);
+	color: gray;
+	font-size: .8em;
+	font-weight: 300;
+	height: 60px;
+	margin-bottom: 10%;
+	margin-top: 0;
+	margin: auto;
+	padding-top: 1em;
+	padding-left: 2em;
+	position: relative;
+	width: 100%;
+	z-index: 10;
+}
+
+.stored-image-caption {
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+.stored-image-username {
+	margin-top: .5em;
+}

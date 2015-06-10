@@ -14,8 +14,11 @@ $very-light-gray: #fafafa;
 $base-font-color: $dark-gray;
 $base-background-color: $very-light-gray;
 
+@import 'login';
+@import 'app';
+
 body {
   font-family: $base-font-family;
-  background-color: $base-background-color;
+  background-color: rgb(237, 238, 239);
   color: $base-font-color;
 }
